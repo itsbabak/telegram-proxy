@@ -43,6 +43,8 @@ if [ "$INIT_SYSTEM" = "sysvinit" ]; then
 
 echo "Removing SysV Init script /etc/init.d/proxy"
 
+/etc/init.d/proxy stop
+
 SYSV1=`which update-rc.d`
 SYSV2=`which chkconfig`
 SYSV3=`which rc-update`
@@ -73,6 +75,7 @@ if [ "$INIT_SYSTEM" = "systemd" ]; then
 
 echo "Removing Systemd Unit /lib/systemd/system/proxy.service"
 
+systemctl stop proxy
 systemctl disable proxy
 
 if [ ! -d /lib/systemd/system ]; then
@@ -90,6 +93,8 @@ fi
 if [ "$INIT_SYSTEM" = "upstart" ]; then
 
 echo "Removing Upstart/SysV Scripts /etc/init.d/proxy ; /etc/init/proxy.conf"
+
+/etc/init.d/proxy stop
 
 test -f /etc/init/proxy.conf && rm -f /etc/init/proxy.conf
 
@@ -122,6 +127,8 @@ fi
 if [ "$INIT_SYSTEM" = "busybox" ]; then
 
 echo "Removing Busybox Script /etc/init.d/proxy"
+
+/etc/init.d/proxy stop
 
 rc-update del proxy
 
