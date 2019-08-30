@@ -10,7 +10,7 @@ kill -9 $PROXY_PID;
 
 fi
 
-test -d /etc/proxy && rm -rf /etc/proxy || exit 1
+#test -d /etc/proxy && rm -rf /etc/proxy || exit 1
 
 CHECK_USER=`cat /etc/passwd |grep 'proxy:' |grep -v 'systemd'`
 

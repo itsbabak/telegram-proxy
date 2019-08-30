@@ -1,5 +1,7 @@
 Russian version:
 
+Обновление: proxy версия 4.6 -> 8.1 (Если обновляетесь со старой версии, пожалуйста запустите uninstall.sh, затем install.sh)
+
 Сделайте свой Socks5 Proxy с авторизацией меньше чем за 1 минуту.
 
 Поддерживаемые системы x86 32/64bit:
@@ -23,6 +25,8 @@ Russian version:
 Пропишите настройки Socks5 Proxy в Телеграм мессенджере или в любых других программах
 
 English version:
+
+Updated: proxy version 4.6 -> 8.1 (If updating from old version, please use uninstall.sh, then install.sh)
 
 Build your own Socks5 Proxy with authorization at less than 1 minute.
 

@@ -4,5 +4,5 @@ stop on shutdown
 script
   set -a
   . /etc/proxy/proxy.conf
-  exec su -s /bin/sh -c 'exec "$0" "$@"' proxy -- /usr/bin/proxy socks --daemon -t tcp -p ":${SPORT}" -a "${SUSER}:${SPASS}"
+  exec su -s /bin/sh -c 'exec "$0" "$@"' proxy -- /usr/bin/proxy sps --daemon -t tcp -p ":${SPORT}" -A "${SUSER}:${SPASS}"
 end script

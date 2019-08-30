@@ -7,7 +7,7 @@ Type=forking
 EnvironmentFile=-/etc/proxy/proxy.conf
 User=proxy
 Group=proxy
-ExecStart=/usr/bin/proxy socks --daemon -t tcp -p ":${SPORT}" -a "${SUSER}:${SPASS}"
+ExecStart=/usr/bin/proxy sps --daemon -t tcp -p ":${SPORT}" -A "${SUSER}:${SPASS}"
 
 [Install]
 WantedBy=multi-user.target
