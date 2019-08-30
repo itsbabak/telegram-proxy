@@ -137,7 +137,7 @@ fi
 
 echo "Copying configuration to /etc/proxy/proxy.conf file"
 
-cp proxy.conf /etc/proxy/
+test -f /etc/proxy/proxy.conf || cp proxy.conf /etc/proxy/
 
 if [ ! -e proxy ]; then
 
